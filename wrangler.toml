@@ -1,0 +1,15 @@
+name = "hono-cloudfare-workers"
+main = "src/index.ts"
+compatibility_date = "2025-08-19"
+compatibility_flags = ["nodejs_compat"]
+
+[build]
+command = ""
+
+[env.production]
+compatibility_flags = ["nodejs_compat"]
+
+# Add environment variables if needed
+[vars]
+# FE_URL = "https://your-frontend-url.com"
+JWT_SECRET = "your-super-secret-jwt-key-that-is-at-least-32-characters-long"

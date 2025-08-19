@@ -1,0 +1,19 @@
+{
+  "name": "hono-cloudfare-workers",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "cf-typegen": "wrangler types --env-interface CloudflareBindings"
+  },
+  "dependencies": {
+    "@types/cheerio": "^1.0.0",
+    "@types/he": "^1.2.3",
+    "cheerio": "^1.1.2",
+    "hono": "^4.9.2"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250819.0",
+    "wrangler": "^4.4.0"
+  }
+}

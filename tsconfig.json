@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "types": ["@cloudflare/workers-types"],
+    "skipLibCheck": true,
+
+    /* Language and Environment */
+    "target": "ES2022",
+    "lib": ["ES2022"],
+
+    /* Modules */
+    "module": "ES2022",
+    "rootDir": "./src",
+    "moduleResolution": "bundler",
+
+    /* Type resolution */
+    "typeRoots": ["node_modules/@types"],
+    "resolveJsonModule": true,
+
+    /* Emit */
+    "outDir": "./dist",
+
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type Checking */
+    "strict": true,
+
+    /* Additional options for Workers */
+    "isolatedModules": true,
+    "noEmit": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}
