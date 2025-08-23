@@ -37,8 +37,8 @@ export const updateUnifiedtt = async (
 
     // Determine which URL to use based on batch number
     const unifiedTimeTableUrl = batchNumber === 1
-      ? 'https://academia.srmist.edu.in/srm_university/academia-academic-services/page/Unified_Time_Table_2024_Batch_1'
-      : 'https://academia.srmist.edu.in/srm_university/academia-academic-services/page/Unified_Time_Table_2024_batch_2';
+      ? 'https://academia.srmist.edu.in/srm_university/academia-academic-services/page/Unified_Time_Table_2025_Batch_1'
+      : 'https://academia.srmist.edu.in/srm_university/academia-academic-services/page/Unified_Time_Table_2025_batch_2';
 
     // Make the request to get the unified timetable
     const response = await fetch(unifiedTimeTableUrl, {

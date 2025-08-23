@@ -2,6 +2,7 @@ import { sign, verify } from "hono/jwt";
 import {
   AuthProps,
   AuthResult,
+  RefreshResult,
   ErrorResponse,
   LookupResponse,
   PasswordResponse,
@@ -293,6 +294,49 @@ export const checkAuth = async (c: Context): Promise<any> => {
   } catch (err: any) {
     return c.json({
       error: "Invalid/Expired token",
+      details: err?.message,
+      success: false,
+    } as ErrorResponse);
+  }
+};
+
+export const refreshToken = async (c: Context): Promise<any> => {
+  try {
+    const academiaCookies = c.get('academiaCookies');
+    
+    if (!academiaCookies) {
+      return c.json({
+        error: "No valid session found",
+        success: false,
+      } as ErrorResponse);
+    }
+
+    const jwtSecret = getJwtSecret();
+    
+    const expirationTime = Math.floor(Date.now() / 1000) + JWT_EXPIRY_DAYS * 24 * 60 * 60;
+    
+    const userId = c.get('userId') || 'unknown';
+    
+    const newToken = await sign(
+      {
+        userId: userId,
+        academiaCookies: academiaCookies,
+        exp: expirationTime,
+      },
+      jwtSecret
+    );
+
+    return c.json({
+      token: newToken,
+      email: userId,
+      success: true,
+      message: "Token refreshed successfully",
+      expiresIn: JWT_EXPIRY_DAYS * 24 * 60 * 60,
+    } as RefreshResult);
+  } catch (err: any) {
+    console.error("Token refresh error:", err);
+    return c.json({
+      error: "Failed to refresh token",
       details: err?.message,
       success: false,
     } as ErrorResponse);

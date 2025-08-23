@@ -23,6 +23,14 @@ export interface AuthResult {
     message: string;
 }
 
+export interface RefreshResult {
+    token: string;
+    email: string;
+    success: true;
+    message: string;
+    expiresIn: number;
+}
+
 export interface ErrorResponse {
     error: string;
     details?: string;

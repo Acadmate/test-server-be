@@ -119,8 +119,11 @@ export const verifyToken = async (c: Context, next: Next): Promise<any> => {
       );
     }
 
-    // Store decrypted cookies in context
+    // Store decrypted cookies and user ID in context
     c.set("academiaCookies", decryptedCookies);
+    if (decodedPayload.userId) {
+      c.set("userId", decodedPayload.userId);
+    }
     await next();
   } catch (error: any) {
     console.error("JWT verification error:", error);
