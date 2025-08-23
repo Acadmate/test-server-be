@@ -1,5 +1,6 @@
 import * as cheerio from "cheerio";
 import { Cheerio } from "cheerio";
+import type { Element } from "domhandler";
 
 interface ResponseData {
   timetable: any[];
@@ -63,7 +64,7 @@ export async function updateTimetable(cookies: string, batchNumber: number) {
 
         const tables = $("table");
 
-        let timetableTable: Cheerio<cheerio.Element> | undefined;
+        let timetableTable: Cheerio<Element> | undefined;
         tables.each((index, table) => {
           const headers = $(table)
             .find("tr")

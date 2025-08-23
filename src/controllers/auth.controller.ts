@@ -199,13 +199,12 @@ const passwordAuth = async (
     )
   );
   if (!res.ok) throw new Error(`Password auth failed: ${res.status}`);
-  try {
-    const json = (await res.json()) as PasswordResponse;
-    if (!json.message?.toLowerCase().includes("success"))
-      throw new Error(json.message);
-  } catch (_) {
-    /* ignore json parse errors */
+  const json = (await res.json()) as PasswordResponse;
+
+  if (!json.message?.toLowerCase().includes("success")) {
+    throw new Error(json.message || "Invalid username or password");
   }
+
   return extractCookiesFromHeader(res.headers.get("set-cookie"));
 };
 
@@ -302,8 +301,8 @@ export const checkAuth = async (c: Context): Promise<any> => {
 
 export const refreshToken = async (c: Context): Promise<any> => {
   try {
-    const academiaCookies = c.get('academiaCookies');
-    
+    const academiaCookies = c.get("academiaCookies");
+
     if (!academiaCookies) {
       return c.json({
         error: "No valid session found",
@@ -312,11 +311,12 @@ export const refreshToken = async (c: Context): Promise<any> => {
     }
 
     const jwtSecret = getJwtSecret();
-    
-    const expirationTime = Math.floor(Date.now() / 1000) + JWT_EXPIRY_DAYS * 24 * 60 * 60;
-    
-    const userId = c.get('userId') || 'unknown';
-    
+
+    const expirationTime =
+      Math.floor(Date.now() / 1000) + JWT_EXPIRY_DAYS * 24 * 60 * 60;
+
+    const userId = c.get("userId") || "unknown";
+
     const newToken = await sign(
       {
         userId: userId,
