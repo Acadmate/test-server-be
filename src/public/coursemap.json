@@ -1,0 +1,268 @@
+[
+    {
+      "courseCode": "21LEH101T",
+      "folderNames": [
+        "Communicative English"
+      ]
+    },
+    {
+      "courseCode": "21LEH102T",
+      "folderNames": [
+        "Chinese Book"
+      ]
+    },
+    {
+      "courseCode": "21LEH103T",
+      "folderNames": [
+        "French"
+      ]
+    },
+    {
+      "courseCode": "21LEH104T",
+      "folderNames": [
+        "German"
+      ]
+    },
+    {
+      "courseCode": "21LEH105T",
+      "folderNames": [
+        "Japanese"
+      ]
+    },
+    {
+      "courseCode": "21LEH106T",
+      "folderNames": [
+        "Korean"
+      ]
+    },
+    {
+      "courseCode": "21LEH107T",
+      "folderNames": [
+        "Spanish"
+      ]
+    },
+    {
+      "courseCode": "21GNH101J",
+      "folderNames": [
+        "Philosophy Of Engineering"
+      ]
+    },
+    {
+      "courseCode": "21BTB102T",
+      "folderNames": [
+        "Introduction To Computational Biology"
+      ]
+    },
+    {
+      "courseCode": "21BTB103T",
+      "folderNames": [
+        "Microbiology"
+      ]
+    },
+    {
+      "courseCode": "21BTB105T",
+      "folderNames": [
+        "Cell Biology"
+      ]
+    },
+    {
+      "courseCode": "21MAB101T",
+      "folderNames": [
+        "Calculus And Linear Algebra"
+      ]
+    },
+    {
+      "courseCode": "21MAB102T",
+      "folderNames": [
+        "Advanced Calculus And Complex Analysis"
+      ]
+    },
+    {
+      "courseCode": "21PYB102J",
+      "folderNames": [
+        "Semiconductor Physics And Computational Methods"
+      ]
+    },
+    {
+      "courseCode": "21CYB101J",
+      "folderNames": [
+        "Biochemistry",
+        "Chemistry",
+        "Physical And Analytical Chemistry"
+      ]
+    },
+    {
+      "courseCode": "21CSS101J",
+      "folderNames": [
+        "Programming For Problem Solving"
+      ]
+    },
+    {
+      "courseCode": "21EES101T",
+      "folderNames": [
+        "Electrical And Electronics Engineering"
+      ]
+    },
+    {
+      "courseCode": "21MES101T",
+      "folderNames": [
+        "Engineering Mechanics"
+      ]
+    },
+    {
+      "courseCode": "21BTC101T",
+      "folderNames": [
+        "Biochemistry"
+      ]
+    },
+    {
+      "courseCode": "21BMC101J",
+      "folderNames": [
+        "Biomedical Sensors"
+      ]
+    },
+    {
+      "courseCode": "21CHC101J",
+      "folderNames": [
+        "Physical And Analytical Chemistry"
+      ]
+    },
+    {
+      "courseCode": "21CSC101T",
+      "folderNames": [
+        "Object Oriented Design And Programming"
+      ]
+    },
+    {
+      "courseCode": "21ECC101J",
+      "folderNames": [
+        "Electronic System And PCB Design"
+      ]
+    },
+    {
+      "courseCode": "21MAB201T",
+      "folderNames": [
+        "Transforms And Boundary Value Problems"
+      ]
+    },
+    {
+      "courseCode": "21MAB204T",
+      "folderNames": [
+        "Probability And Queueing Theory"
+      ]
+    },
+    {
+      "courseCode": "21CSC206T",
+      "folderNames": [
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "courseCode": "21DCS201P",
+      "folderNames": [
+        "Design Thinking And Methodology"
+      ]
+    },
+    {
+      "courseCode": "21PDH201T",
+      "folderNames": [
+        "Social Engineering"
+      ]
+    },
+    {
+      "courseCode": "21CSC203P",
+      "folderNames": [
+        "Advanced Programming Practice"
+      ]
+    },
+    {
+      "courseCode": "21CSS201T",
+      "folderNames": [
+        "Computer Organization And Architecture"
+      ]
+    },
+    {
+      "courseCode": "21CSC201J",
+      "folderNames": [
+        "Data Structures And Algorithm"
+      ]
+    },
+    {
+      "courseCode": "21CSC205P",
+      "folderNames": [
+        "Database Management Systems"
+      ]
+    },
+    {
+      "courseCode": "21CSC204J",
+      "folderNames": [
+        "Design And Analysis Of Algorithms"
+      ]
+    },
+    {
+      "courseCode": "21CSC202J",
+      "folderNames": [
+        "Operating Systems"
+      ]
+    },
+    {
+      "courseCode": "21CHS251T",
+      "folderNames": [
+        "Basic Chemical Engineering"
+      ]
+    },
+    {
+      "courseCode": "21CHS252J",
+      "folderNames": [
+        "Chemical Engineering Principles"
+      ]
+    },
+    {
+      "courseCode": "21ECC203T",
+      "folderNames": [
+        "Digital Logic Design"
+      ]
+    },
+    {
+      "courseCode": "21PYB101J",
+      "folderNames": [
+        "Electromagnetic Physics"
+      ]
+    },
+    {
+      "courseCode": "21MGH101T",
+      "folderNames": [
+        "Fundamental Of Economics (FOE)"
+      ]
+    },
+    {
+      "courseCode": "21BTC206T",
+      "folderNames": [
+        "Genetics And Cytogenetics"
+      ]
+    },
+    {
+      "courseCode": "21CSE253T",
+      "folderNames": [
+        "Internet Of Things (IOT)"
+      ]
+    },
+    {
+      "courseCode": "21PYB104J",
+      "folderNames": [
+        "Physics-Mechanics"
+      ]
+    },
+    {
+      "courseCode": "21ECC201J",
+      "folderNames": [
+        "Solid State Devices"
+      ]
+    },
+    {
+      "courseCode": "21BTC202T",
+      "folderNames": [
+        "Molecular Biology"
+      ]
+    }
+  ]
