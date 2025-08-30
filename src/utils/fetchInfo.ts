@@ -19,10 +19,46 @@ function parseUserTable($: cheerio.CheerioAPI): UserInfo {
         map.set(key, value)
     }
 
+    // Try to get batch from original "Batch" field first
+    let batch = parseInt(map.get('Batch')!, 10) || 0
+    
+    // If batch is 0 or not found, try the new "Combo / Batch" format
+    if (batch === 0) {
+        // Look for the "Combo / Batch" row in the table to get the HTML structure
+        const tableRows = $('div.cntdDiv > div > table:nth-child(1) tbody tr').toArray()
+        
+        for (const row of tableRows) {
+            const $row = $(row)
+            const cells = $row.find('td').toArray()
+            
+            if (cells.length >= 2) {
+                const key = $(cells[0]).text().trim().replace(/:$/, '')
+                
+                if (key === 'Combo / Batch') {
+                    const $valueCell = $(cells[1])
+                    // Look for red-colored text (could be font color="red" or style with red color)
+                    const redText = $valueCell.find('font[color="red"], [style*="color:red"], [style*="color:#red"], [style*="color: red"]').text().trim()
+                    
+                    if (redText) {
+                        batch = parseInt(redText, 10) || 0
+                    } else {
+                        // Fallback: if no red color found, try to extract the number after slash
+                        const comboBatch = $valueCell.text().trim()
+                        const parts = comboBatch.split('/')
+                        if (parts.length === 2) {
+                            batch = parseInt(parts[1].trim(), 10) || 0
+                        }
+                    }
+                    break
+                }
+            }
+        }
+    }
+
     return {
         registrationNumber: map.get('Registration Number')!,
         name: map.get('Name')!,
-        batch: parseInt(map.get('Batch')!, 10) || 0,
+        batch: batch,
         mobile: parseInt(map.get('Mobile')!, 10) || 0,
         program: map.get('Program')!,
         department: map.get('Department')!,
